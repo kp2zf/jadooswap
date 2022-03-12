@@ -30,7 +30,7 @@ const TransactionHistory = () => {
 
         const clientRes = await client.fetch(query)
 
-        setTransactionHistory(clientRes[0].transactionList)
+        setTransactionHistory(clientRes[0].transactionList.slice(0,3))
       }
     })()
   }, [isLoading, currentAccount])
